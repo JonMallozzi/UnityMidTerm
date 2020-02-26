@@ -4,7 +4,7 @@
 
 Goals:
 
-* have a terrian that can traversed
+* have a terrian that can be traversed
 * character
 * sword that slashes
 * one enemy 
