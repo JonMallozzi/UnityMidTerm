@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Will's things/Will.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
