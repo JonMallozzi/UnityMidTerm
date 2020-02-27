@@ -14,6 +14,7 @@
 * If have time make a skeleton/slime boss - Jon 
 * one building model - Jon 
 * if have time make sword picked up in said building 
+* sound effects - Jon
 
 
 ## Maybe Goals
@@ -22,3 +23,4 @@
 * Title screen 
 * more areas
 * more characters 
+* music - Jon 
