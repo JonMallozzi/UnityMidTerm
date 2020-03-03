@@ -43,7 +43,6 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        print("shoot " + Time.time);
         BulletController bull = Instantiate(bullet, firePoint.position, firePoint.rotation);
         bull.speed = fireForce;
         bull.damage = damage;

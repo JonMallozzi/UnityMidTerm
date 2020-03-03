@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     public float speed = 1;
     public int damage = 1;
+
     private void FixedUpdate()
     {
         //move along the y
@@ -14,11 +15,12 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name.Contains("Player"))//placeholder for until Austin makes a character controller
+        if (other.GetComponent<Health>())
         {
-            //other.GetComponent<Health>().TakeDamage(damage);
+            other.GetComponent<Health>().ModifyHealth(-damage);// Damages any health component it collides with
             Remove();
         }
+
     }
 
     private void Remove()
