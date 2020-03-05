@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4581959389700085571}
   - component: {fileID: 4581959389700085570}
   - component: {fileID: 4581959389700085573}
+  - component: {fileID: 9158542109759319614}
   - component: {fileID: 4581959389700085582}
   m_Layer: 0
   m_Name: Slime Prototype
@@ -181,7 +182,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4581959389700085572}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: de73c571ded5b4c4a8a7250d01ea6632, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
@@ -204,7 +205,41 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
-  jumpForceVectors: {x: 500, y: 1000}
+  jumpForceVectors: {x: 500, y: 500}
+--- !u!114 &9158542109759319614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581959389700085572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242a18922bdaff74ab3726d2e34a98ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4581959389700085572}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  healEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxHealth: 10
+  currentHealth: 10
 --- !u!54 &4581959389700085582
 Rigidbody:
   m_ObjectHideFlags: 0

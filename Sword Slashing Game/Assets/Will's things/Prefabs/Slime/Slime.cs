@@ -10,6 +10,7 @@ public class Slime : MonoBehaviour
     Rigidbody rb;
     Collider col;
 
+    [SerializeField] float jumpAttemptInterval = 1;
     public Vector2 jumpForceVectors;
     bool grounded = false;
 
@@ -41,7 +42,7 @@ public class Slime : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(jumpAttemptInterval);
             grounded = Physics.Raycast(transform.position, Vector3.down, col.bounds.size.y + 0.01f, groundMask);
             if (grounded)
             {

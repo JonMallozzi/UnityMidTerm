@@ -930,6 +930,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5490dd7805a523143b148684f14eaad4, type: 3}
+--- !u!1 &4581959389833235991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4581959389700085572, guid: 5490dd7805a523143b148684f14eaad4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4581959389833235990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4581959389833235992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581959389833235991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242a18922bdaff74ab3726d2e34a98ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  healEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxHealth: 10
+  currentHealth: 10
 --- !u!1001 &5768736116384975049
 PrefabInstance:
   m_ObjectHideFlags: 0
