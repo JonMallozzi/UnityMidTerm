@@ -11,7 +11,7 @@ public class Slime : MonoBehaviour
     Collider col;
 
     [SerializeField] float jumpAttemptInterval = 1;
-    public Vector2 jumpForceVectors;
+    public Vector2 jumpVelVectors;
     bool grounded = false;
 
     private void Start()
@@ -33,8 +33,8 @@ public class Slime : MonoBehaviour
         looker.LookAt(target);
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, looker.eulerAngles.y, transform.eulerAngles.z);
         //slime is now looking at player. Add force to forward and upward axis
-        rb.AddForce(transform.forward * jumpForceVectors.x);
-        rb.AddForce(transform.up * jumpForceVectors.y);
+        rb.AddForce(transform.forward * jumpVelVectors.x);
+        rb.AddForce(transform.up * jumpVelVectors.y);
 
     }
 
