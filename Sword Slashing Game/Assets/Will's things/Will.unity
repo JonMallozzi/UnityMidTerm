@@ -507,7 +507,7 @@ MonoBehaviour:
   jumpVel: 500
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 1
 --- !u!54 &1316794078
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -785,15 +785,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4394179224924774863, guid: da009902290bcb64ab5b7357799bd338,
-        type: 3}
-      propertyPath: speed
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 3181943914637403802, guid: da009902290bcb64ab5b7357799bd338,
         type: 3}
       propertyPath: m_Name
       value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394179224924774863, guid: da009902290bcb64ab5b7357799bd338,
+        type: 3}
+      propertyPath: speed
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3181943914637403782, guid: da009902290bcb64ab5b7357799bd338,
         type: 3}
