@@ -52,14 +52,6 @@ public class Health : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.anyKeyDown)
-        {
-            ModifyHealth(-1);
-        }
-    }
-
     void Ping()
     {
         Debug.Log("Ping");
