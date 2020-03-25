@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     public float lookRadius = 9f;
     Transform target;
     NavMeshAgent agent;
+	
+	public static bool isWalking = false;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,9 @@ public class EnemyController : MonoBehaviour
 	if (distance <= lookRadius)
 	{
 		agent.SetDestination(target.position);
+
+		isWalking = true;
+		//Debug.Log(isWalking);
 
 		if (distance <= agent.stoppingDistance) {
 			FaceTarget();
