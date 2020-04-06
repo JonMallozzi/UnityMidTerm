@@ -11,6 +11,9 @@ public class Health : MonoBehaviour
 
     public int maxHealth = 10;
     public int currentHealth = 10;
+
+    [SerializeField] float invlunerabilityTime = 1;
+    float lastTimeHit;
     bool dead = false;
 
     public void ModifyHealth(int amount)
@@ -26,7 +29,16 @@ public class Health : MonoBehaviour
         }
         else if (amount < 0)
         {
-            damageEvent?.Invoke();
+            if(lastTimeHit + invlunerabilityTime < Time.time)
+            {
+                lastTimeHit = Time.time;
+                damageEvent?.Invoke();
+            }
+            else
+            {
+                print("cancelling damage");
+                return;
+            }
         }
         //add or subtract health
         currentHealth += amount;

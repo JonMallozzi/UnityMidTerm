@@ -20,10 +20,10 @@ public class Slime : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         looker = new GameObject().transform;
         looker.SetParent(this.transform);
-        ///if(!target){
-        ///     target = GameObject.FindObjectOfType<PlayerController>();
-        ///}
-        ///       
+        if(!target){
+             target = GameObject.FindObjectOfType<PlayerMove>().transform;
+        }
+              
         StartCoroutine(MovementLoop());
 
     }
@@ -57,5 +57,10 @@ public class Slime : MonoBehaviour
                 }
             }
         }
+    }
+    public void Die()
+    {
+        GameObject.FindObjectOfType<ScoreSystem>().AddToScore(2);
+        Destroy(this.gameObject);
     }
 }
