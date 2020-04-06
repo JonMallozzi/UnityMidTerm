@@ -8,14 +8,17 @@ public class EnemyController : MonoBehaviour
     public float lookRadius = 9f;
     Transform target;
     NavMeshAgent agent;
-	
+	CharacterCombat combat;
+    AudioSource aud;
+
 	public static bool isWalking = false;
     
     // Start is called before the first frame update
     void Start()
     {
     	target = PlayerManager.instance.player.transform;
-        agent = GetComponent<NavMeshAgent>();   
+        agent = gameObject.GetComponent<NavMeshAgent>();
+		combat = GetComponent<CharacterCombat>();
     }
 
     // Update is called once per frame
@@ -31,11 +34,26 @@ public class EnemyController : MonoBehaviour
 		//Debug.Log(isWalking);
 
 		if (distance <= agent.stoppingDistance) {
+
+		    CharacterStats targetStats = target.GetComponent<CharacterStats>();
+			isWalking = false;
+			if (targetStats != null)
+            {
+					//Debug.Log("Hello");
+					combat.Attack(targetStats);
+			}
+		
 			FaceTarget();
 		}
 	}
-  }
+}
 
+    public void Die()
+    {
+		GameObject.FindObjectOfType<ScoreSystem>().AddToScore(2);
+
+		Destroy(this.gameObject);
+    }
 	void FaceTarget () {
 
 		Vector3 direction = (target.position - target.position).normalized;

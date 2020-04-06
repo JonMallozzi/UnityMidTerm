@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerStats : CharacterStats 
 {
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +12,9 @@ public class PlayerStats : CharacterStats
     }
 
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
-        
-    }
+        Debug.Log($"<color=green>{currentHealth}</color>");
+    }*/
 
 }

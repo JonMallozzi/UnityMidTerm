@@ -29,6 +29,15 @@ public class ScoreSystem : MonoBehaviour
         AddToScore(0); //this merely updates it without modifying it
     }
 
+    private void Update()
+    {
+       if(score > 15)
+        {
+            scoreText.text = "You Win!";
+            highScoreText.text = "Nice Job Idiot!";
+        }
+    }
+
     public void AddToScore(int amount)
     {
         //Can be updated negatively or positively

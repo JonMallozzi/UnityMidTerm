@@ -26,12 +26,17 @@ public class CharacterStats : MonoBehaviour
 		//ensures that objects only take positive damage
 		//or else they would be healed
 		damage = Mathf.Clamp(damage, 0, int.MaxValue);
-			
+
+		Debug.Log("<color=blue>Hello</color>");
 		currentHealth -= damage;
+
 		Debug.Log(transform.name + " takes " + damage + " damage.");
 
 		if (currentHealth <= 0)
+        {
 			Die();
+		}
+			
 	}
 
 	public virtual void Die ()

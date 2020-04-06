@@ -18,10 +18,26 @@ public class SkeletonController : MonoBehaviour {
     void Update() {
 
 		bool isWalking = EnemyController.isWalking;
-		Debug.Log(isWalking);
-			
+				
 		if(isWalking){
 			anim.SetInteger("Condition", 1);
-		}
+        }
+        else
+        {
+            anim.SetInteger("Condition", 0);
+        }
     }
+
+    public void Die()
+    {
+        StartCoroutine(DieRoutine());
+    }
+
+    IEnumerator DieRoutine()
+    {
+        anim.SetInteger("Condition", 2);
+        yield return new WaitForSeconds(2);
+        Destroy(this.gameObject);
+    }
+
 }
